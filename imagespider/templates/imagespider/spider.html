@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取</title>
+    <style>
+        div{
+               width: auto;
+               margin: 0;
+               padding: 0;
+               text-align:center;
+           }
+    </style>
+</head>
+<body>
+    <div>
+        <!--action 里面的地址,就是需要返回到的视图函数的地址!-->
+        <form action="/spider/sp" method="POST">
+            <P>百度图库</P>
+            <input id='123' type="text" placeholder="请输入搜索关键字（例：赵丽颖）" name="name" >
+            <input type="submit" value="抓取">
+            <p>起始页:<input type="text" placeholder="请输入整数（例：1)" name="begin"></p>
+            <p>终止页:<input type="text" placeholder="请输入整数（例：2)" name="end"></p>
+        </form>
+
+        {% for i in img %}
+            <img src="/static/images/{{ name }}/{{ i }}">
+        {% endfor %}
+    </div>
+</body>
+</html>
